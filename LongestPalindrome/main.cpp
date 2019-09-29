@@ -15,11 +15,8 @@ int main(int argc, char *argv[])
     cout << "Enter the string: " << endl;
     getline(cin, InptString);
 
-    set<string> Palindromes = S.longestPalindrome(InptString);
-    set<string> :: iterator it;
+    string Palindrome = S.longestPalindrome(InptString);
 
-    cout << "\nSelected Palindrome(s)" << "\n" ;
-    for (it = Palindromes.begin(); it!=Palindromes.end() ; ++it )
-        cout << *it << "\n " ;
+    cout << "Longest Palindrome is: " << Palindrome <<  "\n "  << endl;
     return 0;
 }
