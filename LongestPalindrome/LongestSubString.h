@@ -11,9 +11,9 @@ class LongestSubString
 {
 public:
     LongestSubString();
-    set<string> longestPalindrome(string s);
+    string longestPalindrome(string s);
     bool IsPalindrome(string s, int start, int end);
-    set<string> FindlongestPalindrome(set<string> s);
+    string FindlongestPalindrome(set<string> s);
 
 };
 

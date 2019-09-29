@@ -6,7 +6,7 @@ LongestSubString::LongestSubString()
 }
 
 
-set<string> LongestSubString::longestPalindrome(string s)
+string LongestSubString::longestPalindrome(string s)
 {
     set<string> subStrings ;
 
@@ -48,41 +48,18 @@ bool LongestSubString::IsPalindrome(string s, int start, int end)
 }
 
 
-set<string> LongestSubString:: FindlongestPalindrome(set<string> s)
+string LongestSubString:: FindlongestPalindrome(set<string> s)
 {
-    cout << "Do you want to display all the substring palindromes - enter A\nDo you want to print only the longest Palindrome     - enter P " << endl;
-
-    set<string> output;
-    char selection;
-
-    cin >> selection;
-    while(selection != 'A' and selection != 'P')
-    {
-        cout << "Enter only valid choices";
-        cout << "Do you want to display all the substring palindromes - enter A\nDo you want to print only the longest Palindrome     - enter P " << endl;
-        if(selection == 'P' or selection =='A')
-            break;
-    }
-
-    if(selection == 'P')
-    {
-        string longest ;
-        unsigned int max_size = 0;
-
-        for(string subString : s)
+    string output;
+    unsigned int max_size = 0;
+    for(string subString : s)
         {
-            if(subString.length() > max_size)
-                 {
-                     max_size = subString.length();
-                     output.insert(subString);
-                 }
-             }
-
-        return output;
-    }
-    else if(selection == 'A')
-    {
-        return s;
-    }
+        if(subString.length() > max_size)
+            {
+            max_size = subString.length();
+            output = subString;
+            }
+        }
+    return output;
 }
 
